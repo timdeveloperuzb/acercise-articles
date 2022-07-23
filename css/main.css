@@ -1,44 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 /* GLOBAL  */
 html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
 *,
 ::after,
 ::before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background: #fff;
-    color: #222;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: "Arial",sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  color: #222;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Arial", sans-serif;
 }
 
 img {
-    max-width: 100%;
-    height: auto;   
+  max-width: 100%;
+  height: auto;
 }
 
 /* CONTAINER */
 .container {
-    width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .main-content {
-    flex-grow: 1;
+  border: 2px solid rgb(25, 225, 11);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.global-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-grow: 1;
+  border: 2px solid yellow;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: 2px solid red;
+  background-image: url("/img/left-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.hero-content {
+  width: 285px;
+}
+.hero-title {
+  text-transform: capitalize;
+  font-family: "Bebas Neue", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+.hero-link {
+  display: inline-block;
+  background: #1e90ff;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.hero-inner {
+  display: flex;
+  /* align-items: center; */
+  padding: 12px 24px;
+}
+.hero-inner::before {
+    content: "";
+    width: 20px;
+    height: 19px;
+    background: url("/img/icon-star.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 12px;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .hero {
+        background-image: url("/img/left-bg@2x.jpg");
+    }
+
 }
